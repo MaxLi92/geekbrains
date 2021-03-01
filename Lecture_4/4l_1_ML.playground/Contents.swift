@@ -94,3 +94,5 @@ car2.openWindow()
 car2.switchGearLow()
 car2.engineState = .run
 print(car2.engineState)
+car2.switchGearHigt()
+
