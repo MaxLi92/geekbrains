@@ -7,39 +7,39 @@ number: +77013610104
 */
 
 enum engineState {
-case run, stop
+    case run, stop
 }
 
 enum windowState {
-case open, close
+    case open, close
 }
 
 enum carHatchState{
-case open, close
+    case open, close
 }
 
 enum lowGearState{
-case low, higt
+    case low, higt
 }
 
 protocol Car {
-var mark: String { get }
-var year: Int { get }
-var engineState: engineState { get set }
-var windowState: windowState { get set }
+    var mark: String { get }
+    var year: Int { get }
+    var engineState: engineState { get set }
+    var windowState: windowState { get set }
 }
 
 extension Car{
 
 mutating func window(status: windowState) {
-switch status {
-case .open:
-print("Окна открыты")
-self.windowState = .open
-case .close:
-print("Окна закрыты")
-windowState = .close
-}
+    switch status {
+        case .open:
+            print("Окна открыты")
+            self.windowState = .open
+        case .close:
+            print("Окна закрыты")
+            windowState = .close
+    }
 }
 
 mutating func engine(status: engineState) {
